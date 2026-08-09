@@ -45,13 +45,7 @@ SQLite is included with Python, so no separate database installation is required
 * React
 * Vite
 
-## Run the Backend
 
-Navigate to the backend:
-
-```bash
-cd backend
-```
 
 Create and activate a virtual environment:
 
@@ -70,6 +64,14 @@ Install dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
+
+## Run the Backend
+
+Navigate to the backend:
+
+```bash
+cd backend/src
 ```
 
 Start the API:
