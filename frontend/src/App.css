@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #222;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  background: #999;
+}
+
+.examples {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.examples button {
+  background: #64748b;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 25px;
+}
+
+.history,
+.result {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.history-item {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.history-item:hover {
+  background: #f1f5f9;
+}
+
+.history-item strong {
+  display: block;
+}
+
+.history-item small {
+  color: #64748b;
+}
+
+.result-box {
+  padding: 20px;
+  background: #ecfdf5;
+  border-radius: 8px;
+  color: #166534;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.step {
+  border-left: 4px solid #2563eb;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #f8fafc;
+  border-radius: 5px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.history-header h2 {
+  margin: 0;
+}
+
+.clear-button {
+  background: #dc2626;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.clear-button:hover {
+  background: #b91c1c;
+}
+
+.clear-button:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+}
+
+.history-item {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.history-item:hover {
+  background: #f1f5f9;
+}
+
+.history-item strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.history-item small {
+  display: block;
+  color: #64748b;
+  margin-top: 3px;
+}
+
+.step div {
+  margin-bottom: 6px;
+}

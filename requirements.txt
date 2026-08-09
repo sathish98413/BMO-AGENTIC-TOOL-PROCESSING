@@ -1,0 +1,7 @@
+langchain
+pydantic
+simpleeval
+fastapi
+uvicorn[standard]
+langgraph
+langchain-core
