@@ -4,7 +4,6 @@ from langgraph.graph import StateGraph, END
 
 from tools.tools import (
     text_processor,
-    calculator,
     calculator_simple,
     weather_mock,
 )

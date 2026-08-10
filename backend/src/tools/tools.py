@@ -28,56 +28,6 @@ def text_processor(text: str, operation: str) -> str:
     return f"Unsupported text operation: {operation}"
 
 
-@tool
-def calculator(expression: str) -> str:
-    """Perform basic arithmetic."""
-
-    operators = {
-        ast.Add: operator.add,
-        ast.Sub: operator.sub,
-        ast.Mult: operator.mul,
-        ast.Div: operator.truediv,
-    }
-
-    def evaluate(node):
-
-        if isinstance(node, ast.Constant):
-            if isinstance(node.value, (int, float)):
-                return node.value
-            raise ValueError("Invalid number")
-
-        if isinstance(node, ast.BinOp):
-            left = evaluate(node.left)
-            right = evaluate(node.right)
-
-            op = operators.get(type(node.op))
-
-            if not op:
-                raise ValueError("Unsupported operator")
-
-            return op(left, right)
-
-        if isinstance(node, ast.UnaryOp):
-
-            value = evaluate(node.operand)
-
-            if isinstance(node.op, ast.USub):
-                return -value
-
-            if isinstance(node.op, ast.UAdd):
-                return value
-
-        raise ValueError("Invalid expression")
-
-    try:
-        tree = ast.parse(expression, mode="eval")
-        return str(evaluate(tree.body))
-
-    except ZeroDivisionError:
-        return "Error: Division by zero"
-
-    except Exception:
-        return "Error: Invalid expression"
     
 
 @tool
